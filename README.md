@@ -63,26 +63,31 @@ REMIND
 STOP
 ```
 along with:
-Action
-Reason
+Action,
+Reason,
 Confidence Score
 
-Example AI Decision
+## 🤖 Example AI Decision
 
-Payment
+### Payment Details
 
-Customer: Rohan Das
-Amount: ₹2,238
-Failure: network_timeout
-Days Failed: 1
-Previous Retries: 0
-Urgency: Low
+| Field | Value |
+|---|---|
+| **Customer** | Rohan Das |
+| **Amount** | ₹2,238 |
+| **Failure Reason** | `network_timeout` |
+| **Days Failed** | 1 |
+| **Previous Retries** | 0 |
+| **Urgency** | Low |
 
-AI Decision: → RETRY
+### AI Recommendation
 
-Reason: Temporary network failure with no previous retries.
+| Decision | Confidence |
+|---|---|
+| 🔄 **RETRY** | **88%** |
 
-Confidence: 88%
+**Reason:**  
+Temporary network failure with no previous retries, making another recovery attempt appropriate.
 
 💰 Business Impact
 
