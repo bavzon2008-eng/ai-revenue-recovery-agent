@@ -61,7 +61,7 @@ The AI then selects:
 RETRY
 REMIND
 STOP
-
+```markdown
 along with:
 Action
 Reason
@@ -120,10 +120,3 @@ Record AI decisions in an audit log
 Stop payments after the maximum recovery-attempt limit
 
 The recovery simulation is deterministic for demonstration purposes and is not connected to a real payment gateway.
-
-
-### ⚠️ The important part
-
-Make sure this appears **after `STOP`**:
-
-```markdown
