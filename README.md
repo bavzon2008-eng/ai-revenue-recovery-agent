@@ -1,51 +1,49 @@
-# Revenue Recovery Agent — Day 1
+# 💰 AI Revenue Recovery Agent
 
-## How to run this
+An AI-powered payment recovery system that detects failed payments, evaluates recovery opportunities, chooses the best recovery action, and tracks recovered revenue automatically.
 
-1. Put `database.py`, `generate_data.py`, `app.py`, and `requirements.txt` all in the
-   same folder (the one you opened in VS Code).
-2. Open a terminal in that folder and set up your environment:
+Built as a hackathon project using Python, Streamlit, SQLite, and OpenRouter AI.
 
-   ```
-   python -m venv venv
-   ```
+---
 
-   Activate it:
-   - Windows: `venv\Scripts\activate`
-   - Mac/Linux: `source venv/bin/activate`
+## 🚀 What the Project Does
 
-3. Install the dependencies:
+Failed payments can result in significant lost revenue.
 
-   ```
-   pip install -r requirements.txt
-   ```
+The AI Revenue Recovery Agent automatically:
 
-4. Run the app:
+1. Detects failed payments
+2. Analyzes payment information and failure reasons
+3. Calculates how long the payment has been failing
+4. Classifies payment urgency
+5. Checks whether the payment is eligible for recovery
+6. Uses AI to choose one action:
+   - **RETRY** — attempt the payment again
+   - **REMIND** — ask the customer to fix their payment method
+   - **STOP** — stop further recovery attempts
+7. Simulates the retry outcome
+8. Updates recovered revenue
+9. Records every AI decision in an audit log
+10. Prevents unlimited recovery attempts
 
-   ```
-   streamlit run app.py
-   ```
+---
 
-5. Your browser should open automatically to `localhost:8501`. If not, copy the
-   URL shown in the terminal into your browser.
+## 🧠 AI Decision Engine
 
-6. Click **"Generate fresh test data"** in the sidebar. You should immediately see
-   KPI cards, a payments table, and a failed-payments tab fill up with fake data.
+For every eligible failed payment, the AI considers:
 
-## What's here today
+- Customer
+- Payment amount
+- Failure reason
+- Days since failure
+- Urgency
+- Previous retry count
+- Recovery attempt count
+- Payment eligibility
 
-- `database.py` — sets up a local SQLite database (`payments.db`, created
-  automatically) with a `payments` table and an `audit_log` table (for later).
-- `generate_data.py` — creates 50 realistic fake payments, ~40% of them failed,
-  with believable failure reasons.
-- `app.py` — the dashboard: KPI cards, tabs for all payments / failed payments /
-  audit log.
+The AI returns a structured decision:
 
-## What's next
-
-- **Day 2:** tighten up failure detection (right now "failed" status *is* the
-  detection — Day 2 adds things like retry eligibility and days-since-failure).
-- **Day 3:** wire in the Claude API so each failed payment gets a real decision
-  (retry / remind / stop), and log every decision into the audit log.
-- **Day 4:** add the stopping rule (max 3 retries), and a results summary
-  showing money recovered.
+```text
+RETRY
+REMIND
+STOP
