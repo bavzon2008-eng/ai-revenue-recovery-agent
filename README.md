@@ -66,10 +66,11 @@ along with:
 Action
 Reason
 Confidence Score
----
-Example
 
-Payment:
+Example AI Decision
+
+Payment
+
 Customer: Rohan Das
 Amount: ₹2,238
 Failure: network_timeout
@@ -77,42 +78,52 @@ Days Failed: 1
 Previous Retries: 0
 Urgency: Low
 
-AI Decision:
-→ RETRY
+AI Decision: → RETRY
 
-Reason:
-Temporary network failure with no previous retries.
+Reason: Temporary network failure with no previous retries.
 
-Confidence:
-88%
+Confidence: 88%
 
-## 💰 Business Impact
+💰 Business Impact
 
 The system is designed to help businesses:
 
-### Increase recovered revenue
+Increase recovered revenue
+
 Automatically identify failed payments that still have a reasonable chance of recovery.
 
-### Reduce unnecessary retries
+Reduce unnecessary retries
+
 Avoid repeatedly attempting payments that should instead be stopped or redirected to the customer.
 
-### Improve customer experience
+Improve customer experience
+
 Use different recovery strategies depending on the payment situation.
 
-### Reduce manual operations
+Reduce manual operations
+
 Automate the first layer of payment recovery decisions.
 
-### Improve accountability
+Improve accountability
+
 Maintain an audit trail of every AI decision and recovery action.
-## 📊 Prototype Results
+
+📊 Prototype Results
 
 Testing with a simulated dataset of 50 payments demonstrated that the agent can:
 
-- Detect failed payments
-- Process multiple recovery decisions
-- Recover simulated payments
-- Track recovered revenue
-- Record AI decisions in an audit log
-- Stop payments after the maximum recovery-attempt limit
+Detect failed payments
+Process multiple recovery decisions
+Recover simulated payments
+Track recovered revenue
+Record AI decisions in an audit log
+Stop payments after the maximum recovery-attempt limit
 
 The recovery simulation is deterministic for demonstration purposes and is not connected to a real payment gateway.
+
+
+### ⚠️ The important part
+
+Make sure this appears **after `STOP`**:
+
+```markdown
