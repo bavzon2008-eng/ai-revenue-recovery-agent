@@ -132,4 +132,11 @@ Maintain an audit trail of every AI decision and recovery action.
 - ✅ Stop payments after the recovery limit
 - ✅ Track recovered revenue
 - ✅ Maintain an audit trail
+
+👩‍💻 Author
+
+**Bavana Saravanan**
+
+Built as an AI-powered automation prototype demonstrating intelligent payment recovery, autonomous decision-making, and revenue recovery tracking.
+
 > **Note:** The recovery simulation is deterministic for demonstration purposes and is not connected to a real payment gateway.
