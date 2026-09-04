@@ -61,7 +61,7 @@ The AI then selects:
 RETRY
 REMIND
 STOP
-```markdown
+```
 along with:
 Action
 Reason
