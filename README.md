@@ -133,7 +133,7 @@ Maintain an audit trail of every AI decision and recovery action.
 - ✅ Track recovered revenue
 - ✅ Maintain an audit trail
 
-👩‍💻 Author
+## 👩‍💻 Author
 
 **Bavana Saravanan**
 
